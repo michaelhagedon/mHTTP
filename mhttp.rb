@@ -6,5 +6,6 @@ server = TCPServer.new 9009
 
 loop do
   client = server.accept
-  client.puts '<html>some HTML</html>'
+  request = client.gets
+  client.puts '<html>This is the index.</html>'
 end
